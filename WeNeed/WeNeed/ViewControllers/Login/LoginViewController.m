@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet SubmitButton *submitButton;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 
@@ -25,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.containerView.layer.cornerRadius = 5;
 
     RACSignal *formValid = [RACSignal combineLatest:@[self.usernameTextField.rac_textSignal,
                                                       self.passwordTextField.rac_textSignal]

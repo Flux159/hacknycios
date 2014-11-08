@@ -27,8 +27,8 @@
 }
 
 - (void)commonInit {
-    self.backgroundColor = [UIColor brownColor];
-    self.tintColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor whiteColor];
+    self.tintColor = [UIColor redColor];
     self.layer.cornerRadius = 5;
 }
 
