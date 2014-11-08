@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 
 #import "SignUpViewController.h"
+#import "LoginViewController.h"
 
 @interface RootViewController ()
 
@@ -23,7 +24,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self presentViewController:[[SignUpViewController alloc] initWithNibName:nil bundle:nil] animated:NO completion:nil];
+    [self presentViewController:[[LoginViewController alloc] initWithNibName:nil bundle:nil] animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
