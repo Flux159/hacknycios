@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
-                <outlet property="bottomSpaceConstraint" destination="A4A-3n-EZw" id="o9t-Kx-p8K"/>
+                <outlet property="bottomSpaceConstraint" destination="Y7O-NP-IDo" id="XKE-Fg-b5N"/>
                 <outlet property="containerView" destination="i6y-Sr-uhB" id="jIf-uT-0yL"/>
                 <outlet property="passwordTextField" destination="Nbh-4L-PsY" id="smD-4D-swW"/>
                 <outlet property="submitButton" destination="VWc-GO-1LS" id="dAg-af-HRI"/>
@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6y-Sr-uhB" userLabel="Container View">
-                    <rect key="frame" x="20" y="396" width="560" height="101"/>
+                    <rect key="frame" x="20" y="359" width="560" height="101"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ze6-pB-LzN" customClass="WNTextField">
                             <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
@@ -51,24 +51,40 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWc-GO-1LS" customClass="SubmitButton">
-                    <rect key="frame" x="20" y="517" width="560" height="50"/>
+                    <rect key="frame" x="20" y="480" width="560" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="3Zv-OV-Sle"/>
                     </constraints>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.74901960779999999" green="0.18039215689999999" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Submit">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="submitButtonPressed:" destination="-1" eventType="touchUpInside" id="FDA-7D-AjV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyk-cm-L36">
+                    <rect key="frame" x="20" y="550" width="560" height="30"/>
+                    <state key="normal" title="Create an Account">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="createAccountButtonPressed:" destination="-1" eventType="touchUpInside" id="x8u-kJ-iad"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="VWc-GO-1LS" secondAttribute="bottom" constant="33" id="A4A-3n-EZw"/>
                 <constraint firstAttribute="centerX" secondItem="i6y-Sr-uhB" secondAttribute="centerX" id="BG3-dM-9eM"/>
                 <constraint firstItem="VWc-GO-1LS" firstAttribute="top" secondItem="i6y-Sr-uhB" secondAttribute="bottom" constant="20" id="QRV-b0-JHU"/>
+                <constraint firstAttribute="bottom" secondItem="gyk-cm-L36" secondAttribute="bottom" constant="20" id="Y7O-NP-IDo"/>
+                <constraint firstItem="gyk-cm-L36" firstAttribute="width" secondItem="VWc-GO-1LS" secondAttribute="width" id="Zet-gR-Ebr"/>
+                <constraint firstItem="gyk-cm-L36" firstAttribute="top" secondItem="VWc-GO-1LS" secondAttribute="bottom" constant="20" id="ddJ-Fl-oGV"/>
                 <constraint firstItem="i6y-Sr-uhB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="hjB-dd-vuK"/>
                 <constraint firstAttribute="trailing" secondItem="i6y-Sr-uhB" secondAttribute="trailing" constant="20" id="hxa-Qg-42l"/>
+                <constraint firstItem="gyk-cm-L36" firstAttribute="centerX" secondItem="VWc-GO-1LS" secondAttribute="centerX" id="lqQ-a8-Uk9"/>
                 <constraint firstItem="VWc-GO-1LS" firstAttribute="width" secondItem="i6y-Sr-uhB" secondAttribute="width" id="na9-ze-aTr"/>
                 <constraint firstItem="i6y-Sr-uhB" firstAttribute="centerX" secondItem="VWc-GO-1LS" secondAttribute="centerX" id="rui-xz-oE0"/>
             </constraints>

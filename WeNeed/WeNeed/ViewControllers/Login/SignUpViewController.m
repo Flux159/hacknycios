@@ -9,8 +9,7 @@
 #import "SignUpViewController.h"
 
 #import "SubmitButton.h"
-
-#import "NSString+Utils.h"
+#import "LoginViewController.h"
 
 @interface SignUpViewController ()
 
@@ -28,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor wnRedColor];
     self.containerView.layer.cornerRadius = 5;
 
     RACSignal *formValid = [RACSignal combineLatest:@[self.usernameTextField.rac_textSignal,
@@ -39,7 +39,10 @@
                             }];
 
     RAC(self.submitButton, enabled) = formValid;
+}
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     @weakify(self);
     [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillChangeFrameNotification object:nil]
       takeUntil:[self rac_willDeallocSignal]]
@@ -51,13 +54,17 @@
          CGRect frameEndValue = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
 
          [UIView animateWithDuration:animationDuration delay:0.0 options:animationCurve << 16 animations:^{
-             self.bottomSpaceConstraint.constant = 33.0 + self.view.frame.size.height - frameEndValue.origin.y;
+             self.bottomSpaceConstraint.constant = 20.0 + self.view.frame.size.height - frameEndValue.origin.y;
              [self.view layoutIfNeeded];
          } completion:nil];
      }];
 }
+
 - (IBAction)submitButtonPressed:(id)sender {
-//    [self.view endEditing:NO];
+}
+
+- (IBAction)alreadyMemberButtonPressed:(id)sender {
+    [self.navigationController pushViewController:[[LoginViewController alloc] initWithNibName:nil bundle:nil] animated:YES];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 
+#import "SignUpViewController.h"
 #import "SubmitButton.h"
 
 @interface LoginViewController ()
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor wnRedColor];
     self.containerView.layer.cornerRadius = 5;
 
     RACSignal *formValid = [RACSignal combineLatest:@[self.usernameTextField.rac_textSignal,
@@ -35,7 +37,10 @@
                             }];
 
     RAC(self.submitButton, enabled) = formValid;
+}
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     @weakify(self);
     [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillChangeFrameNotification object:nil]
       takeUntil:[self rac_willDeallocSignal]]
@@ -51,6 +56,13 @@
              [self.view layoutIfNeeded];
          } completion:nil];
      }];
+}
+
+- (IBAction)submitButtonPressed:(id)sender {
+}
+
+- (IBAction)createAccountButtonPressed:(id)sender {
+    [self.navigationController pushViewController:[[SignUpViewController alloc] initWithNibName:nil bundle:nil] animated:YES];
 }
 
 @end

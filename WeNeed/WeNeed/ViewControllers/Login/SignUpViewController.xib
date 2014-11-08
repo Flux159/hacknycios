@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController">
             <connections>
-                <outlet property="bottomSpaceConstraint" destination="ZFo-Bl-fht" id="uoq-t5-egl"/>
+                <outlet property="bottomSpaceConstraint" destination="wF6-7o-HG5" id="xVF-2k-reS"/>
                 <outlet property="confirmPasswordTextField" destination="HpN-fl-Sb7" id="7F6-Ap-ipt"/>
                 <outlet property="containerView" destination="1Pm-oJ-avQ" id="VuP-pt-5VU"/>
                 <outlet property="passwordTextField" destination="ZjO-dz-Btt" id="g3b-IT-4rf"/>
@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pm-oJ-avQ" userLabel="Container View">
-                    <rect key="frame" x="25" y="345" width="550" height="152"/>
+                    <rect key="frame" x="25" y="308" width="550" height="152"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyB-FG-7wC" customClass="WNTextField">
                             <rect key="frame" x="0.0" y="0.0" width="550" height="50"/>
@@ -62,17 +62,27 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yy9-ff-UHG" customClass="SubmitButton">
-                    <rect key="frame" x="25" y="517" width="550" height="50"/>
+                    <rect key="frame" x="25" y="480" width="550" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="hxa-1B-6Hr"/>
                     </constraints>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="Submit">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="submitButtonPressed:" destination="-1" eventType="touchUpInside" id="JUj-u6-Dya"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CL-UI-DpZ">
+                    <rect key="frame" x="25" y="550" width="550" height="30"/>
+                    <state key="normal" title="Already a Member?">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="alreadyMemberButtonPressed:" destination="-1" eventType="touchUpInside" id="xQx-ZN-DeI"/>
                     </connections>
                 </button>
             </subviews>
@@ -83,8 +93,11 @@
                 <constraint firstItem="yy9-ff-UHG" firstAttribute="width" secondItem="1Pm-oJ-avQ" secondAttribute="width" id="A05-ZT-cU8"/>
                 <constraint firstItem="yy9-ff-UHG" firstAttribute="centerX" secondItem="1Pm-oJ-avQ" secondAttribute="centerX" id="EOZ-qQ-GXM"/>
                 <constraint firstItem="1Pm-oJ-avQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="V5J-md-E8l"/>
-                <constraint firstAttribute="bottom" secondItem="yy9-ff-UHG" secondAttribute="bottom" constant="33" id="ZFo-Bl-fht"/>
+                <constraint firstItem="8CL-UI-DpZ" firstAttribute="top" secondItem="yy9-ff-UHG" secondAttribute="bottom" constant="20" id="XSb-Oe-7Fp"/>
                 <constraint firstAttribute="centerX" secondItem="1Pm-oJ-avQ" secondAttribute="centerX" id="ezY-ez-AU4"/>
+                <constraint firstItem="8CL-UI-DpZ" firstAttribute="width" secondItem="yy9-ff-UHG" secondAttribute="width" id="fKO-ii-lok"/>
+                <constraint firstItem="8CL-UI-DpZ" firstAttribute="centerX" secondItem="yy9-ff-UHG" secondAttribute="centerX" id="ufN-wE-bZy"/>
+                <constraint firstAttribute="bottom" secondItem="8CL-UI-DpZ" secondAttribute="bottom" constant="20" id="wF6-7o-HG5"/>
             </constraints>
         </view>
     </objects>
