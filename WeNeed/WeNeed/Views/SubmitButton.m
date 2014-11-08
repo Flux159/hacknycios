@@ -27,9 +27,10 @@
 }
 
 - (void)commonInit {
-    self.backgroundColor = [UIColor whiteColor];
+    [self setBackgroundImage:[UIColor imageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
     self.tintColor = [UIColor wnRedColor];
     self.layer.cornerRadius = 5;
+    self.clipsToBounds = YES;
 }
 
 @end

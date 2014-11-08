@@ -15,4 +15,7 @@
 + (UIColor *)wnTextColor;
 + (UIColor *)wnRedColor;
 
+// Returns a 1x1 image of the specified color.
++ (UIImage *)imageWithColor:(UIColor *)color;
+
 @end
