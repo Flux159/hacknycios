@@ -8,8 +8,6 @@
 
 #import "SubmitButton.h"
 
-#import "UIColor+WeNeedStyles.h"
-
 @implementation SubmitButton
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

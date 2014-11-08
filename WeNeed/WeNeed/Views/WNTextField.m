@@ -8,8 +8,6 @@
 
 #import "WNTextField.h"
 
-#import "UIColor+WeNeedStyles.h"
-
 @implementation WNTextField
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

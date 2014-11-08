@@ -10,10 +10,6 @@
 
 #import "SubmitButton.h"
 
-#import "NSString+Utils.h"
-#import <ReactiveCocoa.h>
-#import <RACEXTScope.h>
-
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;

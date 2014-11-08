@@ -11,8 +11,6 @@
 #import "SubmitButton.h"
 
 #import "NSString+Utils.h"
-#import <ReactiveCocoa.h>
-#import <RACEXTScope.h>
 
 @interface SignUpViewController ()
 
