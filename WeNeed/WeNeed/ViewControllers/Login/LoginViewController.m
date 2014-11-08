@@ -12,6 +12,7 @@
 
 #import "NSString+Utils.h"
 #import <ReactiveCocoa.h>
+#import <RACEXTScope.h>
 
 @interface LoginViewController ()
 
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet SubmitButton *submitButton;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpaceConstraint;
 
 @end
 
@@ -37,6 +39,22 @@
                             }];
 
     RAC(self.submitButton, enabled) = formValid;
+
+    @weakify(self);
+    [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillChangeFrameNotification object:nil]
+      takeUntil:[self rac_willDeallocSignal]]
+     subscribeNext:^(NSNotification *notification) {
+         @strongify(self);
+         NSDictionary *userInfo = notification.userInfo;
+         NSUInteger animationCurve = [userInfo[UIKeyboardAnimationCurveUserInfoKey] unsignedIntegerValue];
+         double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+         CGRect frameEndValue = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+
+         [UIView animateWithDuration:animationDuration delay:0.0 options:animationCurve << 16 animations:^{
+             self.bottomSpaceConstraint.constant = 33.0 + self.view.frame.size.height - frameEndValue.origin.y;
+             [self.view layoutIfNeeded];
+         } completion:nil];
+     }];
 }
 
 @end

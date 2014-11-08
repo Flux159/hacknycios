@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController">
             <connections>
+                <outlet property="bottomSpaceConstraint" destination="ZFo-Bl-fht" id="uoq-t5-egl"/>
                 <outlet property="confirmPasswordTextField" destination="HpN-fl-Sb7" id="7F6-Ap-ipt"/>
                 <outlet property="containerView" destination="1Pm-oJ-avQ" id="VuP-pt-5VU"/>
                 <outlet property="passwordTextField" destination="ZjO-dz-Btt" id="g3b-IT-4rf"/>
@@ -70,6 +71,9 @@
                     <state key="normal" title="Submit">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="submitButtonPressed:" destination="-1" eventType="touchUpInside" id="JUj-u6-Dya"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

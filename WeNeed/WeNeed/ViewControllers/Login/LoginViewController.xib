@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="bottomSpaceConstraint" destination="A4A-3n-EZw" id="o9t-Kx-p8K"/>
                 <outlet property="containerView" destination="i6y-Sr-uhB" id="jIf-uT-0yL"/>
                 <outlet property="passwordTextField" destination="Nbh-4L-PsY" id="smD-4D-swW"/>
                 <outlet property="submitButton" destination="VWc-GO-1LS" id="dAg-af-HRI"/>
