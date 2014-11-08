@@ -10,7 +10,6 @@
 
 #import "SignUpViewController.h"
 #import "SubmitButton.h"
-
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -19,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpaceConstraint;
 
+@property (strong, nonatomic) CAGradientLayer *gradientLayer;
 @end
 
 @implementation LoginViewController
@@ -28,6 +28,7 @@
 
     self.view.backgroundColor = [UIColor wnRedColor];
     self.containerView.layer.cornerRadius = 5;
+
 
     RACSignal *formValid = [RACSignal combineLatest:@[self.usernameTextField.rac_textSignal,
                                                       self.passwordTextField.rac_textSignal]
