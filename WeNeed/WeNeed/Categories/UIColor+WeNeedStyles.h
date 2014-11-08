@@ -10,4 +10,9 @@
 
 @interface UIColor (WeNeedStyles)
 
++ (UIColor *)wnLightGreyColor;
++ (UIColor *)wnMediumGreyColor;
++ (UIColor *)wnTextColor;
++ (UIColor *)wnRedColor;
+
 @end

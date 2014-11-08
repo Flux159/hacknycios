@@ -19,20 +19,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6y-Sr-uhB" userLabel="Container View">
-                    <rect key="frame" x="200" y="396" width="200" height="101"/>
+                    <rect key="frame" x="20" y="396" width="560" height="101"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ze6-pB-LzN" customClass="WNTextField">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
                             <color key="backgroundColor" red="0.95599099860000003" green="0.88901475900000004" blue="0.74004596469999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="3aX-sS-FGF"/>
-                                <constraint firstAttribute="width" constant="200" id="3ug-5c-2Sd"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nbh-4L-PsY" customClass="WNTextField">
-                            <rect key="frame" x="0.0" y="51" width="200" height="50"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nbh-4L-PsY" customClass="WNTextField">
+                            <rect key="frame" x="0.0" y="51" width="560" height="50"/>
                             <color key="backgroundColor" red="0.95599099860000003" green="0.88901475900000004" blue="0.74004596469999995" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
@@ -41,14 +40,17 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="101" id="6Jw-fl-iZA"/>
-                        <constraint firstAttribute="width" constant="200" id="Dfa-7b-5uz"/>
+                        <constraint firstItem="Nbh-4L-PsY" firstAttribute="top" secondItem="Ze6-pB-LzN" secondAttribute="bottom" constant="1" id="8ot-LE-KTb"/>
                         <constraint firstItem="Ze6-pB-LzN" firstAttribute="top" secondItem="i6y-Sr-uhB" secondAttribute="top" id="Glo-Zn-9ZS"/>
+                        <constraint firstItem="Nbh-4L-PsY" firstAttribute="height" secondItem="Ze6-pB-LzN" secondAttribute="height" id="KDF-Ol-3zB"/>
+                        <constraint firstItem="Nbh-4L-PsY" firstAttribute="width" secondItem="Ze6-pB-LzN" secondAttribute="width" id="KOR-KS-ugg"/>
                         <constraint firstItem="Ze6-pB-LzN" firstAttribute="leading" secondItem="i6y-Sr-uhB" secondAttribute="leading" id="h14-Py-Fe9"/>
+                        <constraint firstItem="Nbh-4L-PsY" firstAttribute="centerX" secondItem="Ze6-pB-LzN" secondAttribute="centerX" id="nbA-G3-sHO"/>
                         <constraint firstAttribute="trailing" secondItem="Ze6-pB-LzN" secondAttribute="trailing" id="pXP-b6-EGG"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWc-GO-1LS" customClass="SubmitButton">
-                    <rect key="frame" x="200" y="517" width="200" height="50"/>
+                    <rect key="frame" x="20" y="517" width="560" height="50"/>
                     <color key="backgroundColor" red="0.94028108020000001" green="0.56035032959999997" blue="0.271898429" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="3Zv-OV-Sle"/>
@@ -61,10 +63,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="i6y-Sr-uhB" secondAttribute="centerX" id="7mr-4N-RyY"/>
                 <constraint firstAttribute="bottom" secondItem="VWc-GO-1LS" secondAttribute="bottom" constant="33" id="A4A-3n-EZw"/>
+                <constraint firstAttribute="centerX" secondItem="i6y-Sr-uhB" secondAttribute="centerX" id="BG3-dM-9eM"/>
                 <constraint firstItem="VWc-GO-1LS" firstAttribute="top" secondItem="i6y-Sr-uhB" secondAttribute="bottom" constant="20" id="QRV-b0-JHU"/>
-                <constraint firstItem="i6y-Sr-uhB" firstAttribute="width" secondItem="VWc-GO-1LS" secondAttribute="width" id="hPw-qG-8AH"/>
+                <constraint firstItem="i6y-Sr-uhB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="hjB-dd-vuK"/>
+                <constraint firstAttribute="trailing" secondItem="i6y-Sr-uhB" secondAttribute="trailing" constant="20" id="hxa-Qg-42l"/>
+                <constraint firstItem="VWc-GO-1LS" firstAttribute="width" secondItem="i6y-Sr-uhB" secondAttribute="width" id="na9-ze-aTr"/>
                 <constraint firstItem="i6y-Sr-uhB" firstAttribute="centerX" secondItem="VWc-GO-1LS" secondAttribute="centerX" id="rui-xz-oE0"/>
             </constraints>
         </view>

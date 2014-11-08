@@ -20,26 +20,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pm-oJ-avQ" userLabel="Container View">
-                    <rect key="frame" x="200" y="345" width="200" height="152"/>
+                    <rect key="frame" x="25" y="345" width="550" height="152"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyB-FG-7wC" customClass="WNTextField">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="550" height="50"/>
                             <color key="backgroundColor" red="0.95599099860000003" green="0.88901475900000004" blue="0.74004596469999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="RFP-vH-FCr"/>
-                                <constraint firstAttribute="width" constant="200" id="rM3-1y-EO8"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZjO-dz-Btt" customClass="WNTextField">
-                            <rect key="frame" x="0.0" y="51" width="200" height="50"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZjO-dz-Btt" customClass="WNTextField">
+                            <rect key="frame" x="0.0" y="51" width="550" height="50"/>
                             <color key="backgroundColor" red="0.95599099860000003" green="0.88901475900000004" blue="0.74004596469999995" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HpN-fl-Sb7" customClass="WNTextField">
-                            <rect key="frame" x="0.0" y="102" width="200" height="50"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HpN-fl-Sb7" customClass="WNTextField">
+                            <rect key="frame" x="0.0" y="102" width="550" height="50"/>
                             <color key="backgroundColor" red="0.95599099860000003" green="0.88901475900000004" blue="0.74004596469999995" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
@@ -49,13 +48,20 @@
                     <constraints>
                         <constraint firstItem="fyB-FG-7wC" firstAttribute="top" secondItem="1Pm-oJ-avQ" secondAttribute="top" id="5gt-51-0TJ"/>
                         <constraint firstItem="fyB-FG-7wC" firstAttribute="leading" secondItem="1Pm-oJ-avQ" secondAttribute="leading" id="GDn-5o-Dky"/>
+                        <constraint firstItem="HpN-fl-Sb7" firstAttribute="top" secondItem="ZjO-dz-Btt" secondAttribute="bottom" constant="1" id="NcB-07-1sT"/>
+                        <constraint firstItem="fyB-FG-7wC" firstAttribute="centerX" secondItem="ZjO-dz-Btt" secondAttribute="centerX" id="OOj-8r-zfh"/>
                         <constraint firstAttribute="height" constant="152" id="U3R-yM-h5V"/>
-                        <constraint firstAttribute="width" constant="200" id="dbK-sg-F02"/>
+                        <constraint firstItem="ZjO-dz-Btt" firstAttribute="height" secondItem="HpN-fl-Sb7" secondAttribute="height" id="bGd-eN-Zyc"/>
+                        <constraint firstItem="fyB-FG-7wC" firstAttribute="height" secondItem="ZjO-dz-Btt" secondAttribute="height" id="bIu-8p-mG3"/>
+                        <constraint firstItem="fyB-FG-7wC" firstAttribute="width" secondItem="ZjO-dz-Btt" secondAttribute="width" id="d5A-Qi-xT5"/>
+                        <constraint firstItem="ZjO-dz-Btt" firstAttribute="centerX" secondItem="HpN-fl-Sb7" secondAttribute="centerX" id="d7e-QZ-wfp"/>
+                        <constraint firstItem="ZjO-dz-Btt" firstAttribute="top" secondItem="fyB-FG-7wC" secondAttribute="bottom" constant="1" id="ieK-db-Fjc"/>
+                        <constraint firstItem="ZjO-dz-Btt" firstAttribute="width" secondItem="HpN-fl-Sb7" secondAttribute="width" id="yIy-vm-mX8"/>
                         <constraint firstAttribute="trailing" secondItem="fyB-FG-7wC" secondAttribute="trailing" id="zYp-yn-iLk"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yy9-ff-UHG" customClass="SubmitButton">
-                    <rect key="frame" x="200" y="517" width="200" height="50"/>
+                    <rect key="frame" x="25" y="517" width="550" height="50"/>
                     <color key="backgroundColor" red="0.94028108020000001" green="0.56035032959999997" blue="0.271898429" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="hxa-1B-6Hr"/>
@@ -68,9 +74,11 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="1Pm-oJ-avQ" secondAttribute="trailing" constant="25" id="476-Kf-Wvj"/>
                 <constraint firstItem="yy9-ff-UHG" firstAttribute="top" secondItem="1Pm-oJ-avQ" secondAttribute="bottom" constant="20" id="7Yv-kf-Hzg"/>
                 <constraint firstItem="yy9-ff-UHG" firstAttribute="width" secondItem="1Pm-oJ-avQ" secondAttribute="width" id="A05-ZT-cU8"/>
                 <constraint firstItem="yy9-ff-UHG" firstAttribute="centerX" secondItem="1Pm-oJ-avQ" secondAttribute="centerX" id="EOZ-qQ-GXM"/>
+                <constraint firstItem="1Pm-oJ-avQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="V5J-md-E8l"/>
                 <constraint firstAttribute="bottom" secondItem="yy9-ff-UHG" secondAttribute="bottom" constant="33" id="ZFo-Bl-fht"/>
                 <constraint firstAttribute="centerX" secondItem="1Pm-oJ-avQ" secondAttribute="centerX" id="ezY-ez-AU4"/>
             </constraints>

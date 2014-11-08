@@ -8,6 +8,8 @@
 
 #import "WNTextField.h"
 
+#import "UIColor+WeNeedStyles.h"
+
 @implementation WNTextField
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -27,8 +29,16 @@
 }
 
 - (void)commonInit {
-    self.backgroundColor = [UIColor colorWithWhite:1 alpha:.5];
-    self.tintColor = [UIColor redColor];
+    self.backgroundColor = [UIColor colorWithWhite:1 alpha:.3];
+    self.textColor = [UIColor whiteColor];
+    self.tintColor = [UIColor whiteColor];
+    self.placeholder = self.placeholder; // Call the overridden message
+}
+
+- (void)setPlaceholder:(NSString *)placeholder {
+    [super setPlaceholder:placeholder];
+    self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholder
+                                                                 attributes:@{NSForegroundColorAttributeName: [UIColor colorWithWhite:1 alpha:0.7]}];
 }
 
 - (CGRect)textRectForBounds:(CGRect)bounds {
