@@ -14,6 +14,11 @@
 		B5C972D71A0E8C6500ED8C69 /* WeNeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972D61A0E8C6500ED8C69 /* WeNeedTests.m */; };
 		B5C972E51A0E8E4100ED8C69 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972E31A0E8E4100ED8C69 /* RootViewController.m */; };
 		B5C972E61A0E8E4100ED8C69 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C972E41A0E8E4100ED8C69 /* RootViewController.xib */; };
+		B5C972EA1A0E978700ED8C69 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972E81A0E978700ED8C69 /* SignUpViewController.m */; };
+		B5C972EB1A0E978700ED8C69 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C972E91A0E978700ED8C69 /* SignUpViewController.xib */; };
+		B5C972EE1A0E998000ED8C69 /* SubmitButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972ED1A0E998000ED8C69 /* SubmitButton.m */; };
+		B5C972F21A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972F11A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m */; };
+		B5C972F51A0E9FD300ED8C69 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972F41A0E9FD300ED8C69 /* NSString+Utils.m */; };
 		C9DAE1980F904462FD76796A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDD3A5FC26EB99D7225D352 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +49,15 @@
 		B5C972E21A0E8E4100ED8C69 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		B5C972E31A0E8E4100ED8C69 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		B5C972E41A0E8E4100ED8C69 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		B5C972E71A0E978700ED8C69 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		B5C972E81A0E978700ED8C69 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		B5C972E91A0E978700ED8C69 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		B5C972EC1A0E998000ED8C69 /* SubmitButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitButton.h; sourceTree = "<group>"; };
+		B5C972ED1A0E998000ED8C69 /* SubmitButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitButton.m; sourceTree = "<group>"; };
+		B5C972F01A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WeNeedStyles.h"; sourceTree = "<group>"; };
+		B5C972F11A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WeNeedStyles.m"; sourceTree = "<group>"; };
+		B5C972F31A0E9FD300ED8C69 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		B5C972F41A0E9FD300ED8C69 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +112,7 @@
 			children = (
 				B5C972BE1A0E8C6400ED8C69 /* AppDelegate.h */,
 				B5C972BF1A0E8C6400ED8C69 /* AppDelegate.m */,
+				B5C972EF1A0E9B8E00ED8C69 /* Categories */,
 				B5C972E11A0E8DFE00ED8C69 /* Views */,
 				B5C972E01A0E8DED00ED8C69 /* ViewControllers */,
 				B5C972C71A0E8C6400ED8C69 /* Images.xcassets */,
@@ -139,6 +154,9 @@
 				B5C972E21A0E8E4100ED8C69 /* RootViewController.h */,
 				B5C972E31A0E8E4100ED8C69 /* RootViewController.m */,
 				B5C972E41A0E8E4100ED8C69 /* RootViewController.xib */,
+				B5C972E71A0E978700ED8C69 /* SignUpViewController.h */,
+				B5C972E81A0E978700ED8C69 /* SignUpViewController.m */,
+				B5C972E91A0E978700ED8C69 /* SignUpViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -146,8 +164,21 @@
 		B5C972E11A0E8DFE00ED8C69 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5C972EC1A0E998000ED8C69 /* SubmitButton.h */,
+				B5C972ED1A0E998000ED8C69 /* SubmitButton.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B5C972EF1A0E9B8E00ED8C69 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B5C972F01A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.h */,
+				B5C972F11A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m */,
+				B5C972F31A0E9FD300ED8C69 /* NSString+Utils.h */,
+				B5C972F41A0E9FD300ED8C69 /* NSString+Utils.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		EB53AF218951128C1368018B /* Pods */ = {
@@ -243,6 +274,7 @@
 			files = (
 				B5C972CB1A0E8C6400ED8C69 /* LaunchScreen.xib in Resources */,
 				B5C972E61A0E8E4100ED8C69 /* RootViewController.xib in Resources */,
+				B5C972EB1A0E978700ED8C69 /* SignUpViewController.xib in Resources */,
 				B5C972C81A0E8C6400ED8C69 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,9 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C972EE1A0E998000ED8C69 /* SubmitButton.m in Sources */,
 				B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */,
 				B5C972BD1A0E8C6400ED8C69 /* main.m in Sources */,
+				B5C972F21A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m in Sources */,
+				B5C972EA1A0E978700ED8C69 /* SignUpViewController.m in Sources */,
 				B5C972E51A0E8E4100ED8C69 /* RootViewController.m in Sources */,
+				B5C972F51A0E9FD300ED8C69 /* NSString+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

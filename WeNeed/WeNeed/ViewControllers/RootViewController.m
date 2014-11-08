@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 
+#import "SignUpViewController.h"
+
 @interface RootViewController ()
 
 @end
@@ -17,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self presentViewController:[[SignUpViewController alloc] initWithNibName:nil bundle:nil] animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
