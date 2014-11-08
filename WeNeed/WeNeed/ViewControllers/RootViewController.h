@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  WeNeed
 //
 //  Created by Benjamin Wu on 11/8/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RootViewController : UIViewController
 
 @end
-
