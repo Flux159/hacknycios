@@ -21,8 +21,9 @@
 		B5C972FB1A0EA5B600ED8C69 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C972F91A0EA5B600ED8C69 /* LoginViewController.xib */; };
 		B5C972FF1A0EA5CD00ED8C69 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972FD1A0EA5CD00ED8C69 /* SignUpViewController.m */; };
 		B5C973001A0EA5CD00ED8C69 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C972FE1A0EA5CD00ED8C69 /* SignUpViewController.xib */; };
-		B5C973031A0EB93800ED8C69 /* WNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C973021A0EB93800ED8C69 /* WNTextField.m */; };
 		C9DAE1980F904462FD76796A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDD3A5FC26EB99D7225D352 /* libPods.a */; };
+		D8F81FD71A0EF61F008358D9 /* CALayer+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F81FD61A0EF61F008358D9 /* CALayer+utils.m */; };
+		D8F81FDA1A0EF689008358D9 /* WNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F81FD91A0EF689008358D9 /* WNTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 		2283C58A28F4741E799CCD55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3DDD3A5FC26EB99D7225D352 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		943655895D5ED9A27DAC9A4A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B59A62311A0EDAAE00D58789 /* WeNeed-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeNeed-Prefix.pch"; sourceTree = "<group>"; };
 		B5C972B71A0E8C6400ED8C69 /* WeNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C972BB1A0E8C6400ED8C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C972BC1A0E8C6400ED8C69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,8 +65,11 @@
 		B5C972FC1A0EA5CD00ED8C69 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B5C972FD1A0EA5CD00ED8C69 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		B5C972FE1A0EA5CD00ED8C69 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		B5C973011A0EB93800ED8C69 /* WNTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNTextField.h; sourceTree = "<group>"; };
-		B5C973021A0EB93800ED8C69 /* WNTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNTextField.m; sourceTree = "<group>"; };
+		D8F81FD41A0EF57F008358D9 /* WeNeed-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeNeed-Prefix.pch"; sourceTree = "<group>"; };
+		D8F81FD51A0EF61F008358D9 /* CALayer+utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+utils.h"; sourceTree = "<group>"; };
+		D8F81FD61A0EF61F008358D9 /* CALayer+utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+utils.m"; sourceTree = "<group>"; };
+		D8F81FD81A0EF689008358D9 /* WNTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNTextField.h; sourceTree = "<group>"; };
+		D8F81FD91A0EF689008358D9 /* WNTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +137,9 @@
 		B5C972BA1A0E8C6400ED8C69 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8F81FD41A0EF57F008358D9 /* WeNeed-Prefix.pch */,
 				B5C972BB1A0E8C6400ED8C69 /* Info.plist */,
 				B5C972BC1A0E8C6400ED8C69 /* main.m */,
-				B59A62311A0EDAAE00D58789 /* WeNeed-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -172,10 +175,10 @@
 		B5C972E11A0E8DFE00ED8C69 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D8F81FD81A0EF689008358D9 /* WNTextField.h */,
+				D8F81FD91A0EF689008358D9 /* WNTextField.m */,
 				B5C972EC1A0E998000ED8C69 /* SubmitButton.h */,
 				B5C972ED1A0E998000ED8C69 /* SubmitButton.m */,
-				B5C973011A0EB93800ED8C69 /* WNTextField.h */,
-				B5C973021A0EB93800ED8C69 /* WNTextField.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,8 @@
 		B5C972EF1A0E9B8E00ED8C69 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				D8F81FD51A0EF61F008358D9 /* CALayer+utils.h */,
+				D8F81FD61A0EF61F008358D9 /* CALayer+utils.m */,
 				B5C972F01A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.h */,
 				B5C972F11A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m */,
 				B5C972F31A0E9FD300ED8C69 /* NSString+Utils.h */,
@@ -350,10 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F81FD71A0EF61F008358D9 /* CALayer+utils.m in Sources */,
 				B5C972FA1A0EA5B600ED8C69 /* LoginViewController.m in Sources */,
-				B5C973031A0EB93800ED8C69 /* WNTextField.m in Sources */,
 				B5C972EE1A0E998000ED8C69 /* SubmitButton.m in Sources */,
 				B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */,
+				D8F81FDA1A0EF689008358D9 /* WNTextField.m in Sources */,
 				B5C972BD1A0E8C6400ED8C69 /* main.m in Sources */,
 				B5C972F21A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m in Sources */,
 				B5C972E51A0E8E4100ED8C69 /* RootViewController.m in Sources */,
@@ -475,7 +481,6 @@
 			baseConfigurationReference = 943655895D5ED9A27DAC9A4A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeNeed/WeNeed-Prefix.pch";
 				INFOPLIST_FILE = WeNeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -488,7 +493,6 @@
 			baseConfigurationReference = 2283C58A28F4741E799CCD55 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeNeed/WeNeed-Prefix.pch";
 				INFOPLIST_FILE = WeNeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
