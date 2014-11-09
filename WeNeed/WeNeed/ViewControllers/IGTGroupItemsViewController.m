@@ -8,12 +8,16 @@
 
 #import "IGTGroupItemsViewController.h"
 
+#import "IGTBeerView.h"
+
 @interface IGTGroupItemsViewController ()
 
 @property (nonatomic, strong) UICollectionView *itemsCollectionView;
 @property (nonatomic, strong) NSArray *itemsData;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) UIButton *iGotThisButton;
+
+@property (nonatomic, strong) IGTBeerView *beerView;
 
 @end
 
@@ -40,14 +44,20 @@
     [flowLayout setSectionInset:UIEdgeInsetsZero];
     [flowLayout setItemSize:self.view.frame.size];
 
-    self.itemsData = @[@"beer", @"pizza", @"trees"];
 
-    self.itemsCollectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+    self.itemsCollectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     [self.itemsCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"ReuseCell"];
     [self.itemsCollectionView setDataSource:self];
     [self.itemsCollectionView setDelegate:self];
     [self.itemsCollectionView setPagingEnabled:YES];
     [self.view addSubview:self.itemsCollectionView];
+
+    [self setUpPages];
+}
+
+- (void)setUpPages {
+    self.itemsData = @[@"beer", @"pizza", @"trees"];
+    self.beerView = [[IGTBeerView alloc] initWithFrame:self.view.bounds];
 }
 
 - (void)setUpPageControl {
@@ -91,7 +101,10 @@
     NSUInteger number = indexPath.row;
     switch (number) {
         case 0:
-            [cell setBackgroundColor:[UIColor yellowColor]];
+            cell.backgroundColor = [UIColor whiteColor];
+            [self.beerView removeFromSuperview];
+            [self.beerView beginAnimation];
+            [cell addSubview:self.beerView];
             break;
         case 1:
             [cell setBackgroundColor:[UIColor greenColor]];

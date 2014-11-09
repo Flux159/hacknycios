@@ -28,8 +28,8 @@
     [super viewDidAppear:animated];
     UINavigationController *notAuthenticatedNavigationController = [[UINavigationController alloc] initWithRootViewController:[[SignUpViewController alloc] initWithNibName:nil bundle:nil]];
     notAuthenticatedNavigationController.navigationBarHidden = YES;
-    [self presentViewController:notAuthenticatedNavigationController animated:NO completion:nil];
-//    [self presentViewController:[[IGTGroupItemsViewController alloc] initWithNibName:nil bundle:nil] animated:NO completion:nil];
+//    [self presentViewController:notAuthenticatedNavigationController animated:NO completion:nil];
+    [self presentViewController:[[IGTGroupItemsViewController alloc] initWithNibName:nil bundle:nil] animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
