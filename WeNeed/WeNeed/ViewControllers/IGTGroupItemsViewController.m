@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UICollectionView *itemsCollectionView;
 @property (nonatomic, strong) NSArray *itemsData;
 @property (nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, strong) UIButton *iGotThisButton;
 
 @end
 
@@ -43,10 +44,25 @@
     pageControlFrame.size.height = 60;
     self.pageControl = [[UIPageControl alloc] initWithFrame:pageControlFrame];
     self.pageControl.numberOfPages = self.itemsData.count;
-    
+
     [self.pageControl addTarget:self action:@selector(pageControlChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.pageControl];
+
+    self.iGotThisButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.iGotThisButton.frame = CGRectMake(25, pageControlFrame.origin.y - 15 - 50, self.view.frame.size.width - 25 - 25, 50);
+    self.iGotThisButton.layer.cornerRadius = 5;
+    self.iGotThisButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.iGotThisButton.layer.shadowOffset = CGSizeMake(0, 2);
+    self.iGotThisButton.layer.shadowRadius = 2;
+    self.iGotThisButton.layer.shadowOpacity = .5;
+    [self.iGotThisButton setBackgroundImage:[UIColor imageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+    [self.iGotThisButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.iGotThisButton setTitle:@"I Got This" forState:UIControlStateNormal];
+    [self.iGotThisButton addTarget:self action:@selector(iGotThisButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.iGotThisButton];
 }
+
+#pragma mark - UICollectionViewDataSource methods
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -75,6 +91,8 @@
     return cell;
 }
 
+#pragma mark - Page Control
+
 - (void)pageControlChanged:(id)sender
 {
     UIPageControl *pageControl = sender;
@@ -83,10 +101,18 @@
     [self.itemsCollectionView setContentOffset:scrollTo animated:YES];
 }
 
+#pragma mark - UIScrollViewDelegate methods
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     CGFloat pageWidth = self.itemsCollectionView.frame.size.width;
     self.pageControl.currentPage = self.itemsCollectionView.contentOffset.x / pageWidth;
+}
+
+#pragma mark - Actions
+
+- (void)iGotThisButtonPressed:(UIButton *)button {
+
 }
 
 @end
