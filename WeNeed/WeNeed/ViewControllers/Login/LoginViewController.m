@@ -10,6 +10,7 @@
 
 #import "SignUpViewController.h"
 #import "SubmitButton.h"
+#import "CALayer+utils.h"
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -18,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpaceConstraint;
 
-@property (strong, nonatomic) CAGradientLayer *gradientLayer;
+@property (strong, nonatomic) CCARadialGradientLayer *gradientLayer;
 @end
 
 @implementation LoginViewController
@@ -28,6 +29,7 @@
 
     self.view.backgroundColor = [UIColor wnRedColor];
     self.containerView.layer.cornerRadius = 5;
+    self.gradientLayer = [CCARadialGradientLayer radialGradientInView:self.view];
 
 
     RACSignal *formValid = [RACSignal combineLatest:@[self.usernameTextField.rac_textSignal,
@@ -64,6 +66,13 @@
 
 - (IBAction)createAccountButtonPressed:(id)sender {
     [self.navigationController pushViewController:[[SignUpViewController alloc] initWithNibName:nil bundle:nil] animated:YES];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+
+    [self.gradientLayer configureGradientInView:self.view];
 }
 
 @end

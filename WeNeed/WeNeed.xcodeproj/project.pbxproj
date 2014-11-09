@@ -22,7 +22,8 @@
 		B5C972FF1A0EA5CD00ED8C69 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972FD1A0EA5CD00ED8C69 /* SignUpViewController.m */; };
 		B5C973001A0EA5CD00ED8C69 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C972FE1A0EA5CD00ED8C69 /* SignUpViewController.xib */; };
 		C9DAE1980F904462FD76796A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDD3A5FC26EB99D7225D352 /* libPods.a */; };
-		D82074D21A0EB9D700300397 /* backgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82074D11A0EB9D700300397 /* backgroundView.m */; };
+		D8F81FD71A0EF61F008358D9 /* CALayer+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F81FD61A0EF61F008358D9 /* CALayer+utils.m */; };
+		D8F81FDA1A0EF689008358D9 /* WNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F81FD91A0EF689008358D9 /* WNTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +65,11 @@
 		B5C972FC1A0EA5CD00ED8C69 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B5C972FD1A0EA5CD00ED8C69 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		B5C972FE1A0EA5CD00ED8C69 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		D82074D01A0EB9D700300397 /* backgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backgroundView.h; sourceTree = "<group>"; };
-		D82074D11A0EB9D700300397 /* backgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = backgroundView.m; sourceTree = "<group>"; };
 		D8F81FD41A0EF57F008358D9 /* WeNeed-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeNeed-Prefix.pch"; sourceTree = "<group>"; };
+		D8F81FD51A0EF61F008358D9 /* CALayer+utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+utils.h"; sourceTree = "<group>"; };
+		D8F81FD61A0EF61F008358D9 /* CALayer+utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+utils.m"; sourceTree = "<group>"; };
+		D8F81FD81A0EF689008358D9 /* WNTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNTextField.h; sourceTree = "<group>"; };
+		D8F81FD91A0EF689008358D9 /* WNTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 		B5C972E11A0E8DFE00ED8C69 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D8F81FD81A0EF689008358D9 /* WNTextField.h */,
+				D8F81FD91A0EF689008358D9 /* WNTextField.m */,
 				B5C972EC1A0E998000ED8C69 /* SubmitButton.h */,
 				B5C972ED1A0E998000ED8C69 /* SubmitButton.m */,
 			);
@@ -181,6 +186,8 @@
 		B5C972EF1A0E9B8E00ED8C69 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				D8F81FD51A0EF61F008358D9 /* CALayer+utils.h */,
+				D8F81FD61A0EF61F008358D9 /* CALayer+utils.m */,
 				B5C972F01A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.h */,
 				B5C972F11A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m */,
 				B5C972F31A0E9FD300ED8C69 /* NSString+Utils.h */,
@@ -197,8 +204,6 @@
 				B5C972FE1A0EA5CD00ED8C69 /* SignUpViewController.xib */,
 				B5C972F71A0EA5B600ED8C69 /* LoginViewController.h */,
 				B5C972F81A0EA5B600ED8C69 /* LoginViewController.m */,
-				D82074D01A0EB9D700300397 /* backgroundView.h */,
-				D82074D11A0EB9D700300397 /* backgroundView.m */,
 				B5C972F91A0EA5B600ED8C69 /* LoginViewController.xib */,
 			);
 			path = Login;
@@ -350,10 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D82074D21A0EB9D700300397 /* backgroundView.m in Sources */,
+				D8F81FD71A0EF61F008358D9 /* CALayer+utils.m in Sources */,
 				B5C972FA1A0EA5B600ED8C69 /* LoginViewController.m in Sources */,
 				B5C972EE1A0E998000ED8C69 /* SubmitButton.m in Sources */,
 				B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */,
+				D8F81FDA1A0EF689008358D9 /* WNTextField.m in Sources */,
 				B5C972BD1A0E8C6400ED8C69 /* main.m in Sources */,
 				B5C972F21A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m in Sources */,
 				B5C972E51A0E8E4100ED8C69 /* RootViewController.m in Sources */,
