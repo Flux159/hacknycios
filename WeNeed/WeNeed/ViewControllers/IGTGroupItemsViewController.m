@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Donner Dungeon. All rights reserved.
 //
 
-#import "GroupItemsViewController.h"
+#import "IGTGroupItemsViewController.h"
 
-@interface GroupItemsViewController ()
+@interface IGTGroupItemsViewController ()
 
 @property (nonatomic, strong) UICollectionView *itemsCollectionView;
 @property (nonatomic, strong) NSArray *itemsData;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation GroupItemsViewController
+@implementation IGTGroupItemsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,7 +39,7 @@
     [self.view addSubview:self.itemsCollectionView];
     
     CGRect pageControlFrame = self.view.frame;
-    pageControlFrame.origin.y = pageControlFrame.size.height - 90;
+    pageControlFrame.origin.y = pageControlFrame.size.height - 60;
     pageControlFrame.size.height = 60;
     self.pageControl = [[UIPageControl alloc] initWithFrame:pageControlFrame];
     self.pageControl.numberOfPages = self.itemsData.count;
@@ -61,10 +61,10 @@
     NSUInteger number = indexPath.row;
     switch (number) {
         case 0:
-            [cell setBackgroundColor:[UIColor redColor]];
+            [cell setBackgroundColor:[UIColor yellowColor]];
             break;
         case 1:
-            [cell setBackgroundColor:[UIColor blueColor]];
+            [cell setBackgroundColor:[UIColor greenColor]];
             break;
         case 2:
             [cell setBackgroundColor:[UIColor blackColor]];

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GroupItemsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface IGTGroupItemsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
