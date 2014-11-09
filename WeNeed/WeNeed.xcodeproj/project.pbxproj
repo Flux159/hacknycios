@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7DC96D781A0ECAC000CB7200 /* IGTGroupItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC96D761A0ECAC000CB7200 /* IGTGroupItemsViewController.m */; };
+		B59A62391A0EF11A00D58789 /* IGTBeerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A62381A0EF11A00D58789 /* IGTBeerView.m */; };
 		B5C972BD1A0E8C6400ED8C69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972BC1A0E8C6400ED8C69 /* main.m */; };
 		B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972BF1A0E8C6400ED8C69 /* AppDelegate.m */; };
 		B5C972C81A0E8C6400ED8C69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C972C71A0E8C6400ED8C69 /* Images.xcassets */; };
@@ -43,6 +44,8 @@
 		7DC96D751A0ECAC000CB7200 /* IGTGroupItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTGroupItemsViewController.h; sourceTree = "<group>"; };
 		7DC96D761A0ECAC000CB7200 /* IGTGroupItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTGroupItemsViewController.m; sourceTree = "<group>"; };
 		943655895D5ED9A27DAC9A4A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B59A62371A0EF11A00D58789 /* IGTBeerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTBeerView.h; sourceTree = "<group>"; };
+		B59A62381A0EF11A00D58789 /* IGTBeerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTBeerView.m; sourceTree = "<group>"; };
 		B5C972B71A0E8C6400ED8C69 /* WeNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C972BB1A0E8C6400ED8C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C972BC1A0E8C6400ED8C69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				D8F81FD91A0EF689008358D9 /* WNTextField.m */,
 				B5C972EC1A0E998000ED8C69 /* SubmitButton.h */,
 				B5C972ED1A0E998000ED8C69 /* SubmitButton.m */,
+				B59A62371A0EF11A00D58789 /* IGTBeerView.h */,
+				B59A62381A0EF11A00D58789 /* IGTBeerView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			files = (
 				D8F81FD71A0EF61F008358D9 /* CALayer+utils.m in Sources */,
 				B5C972FA1A0EA5B600ED8C69 /* LoginViewController.m in Sources */,
+				B59A62391A0EF11A00D58789 /* IGTBeerView.m in Sources */,
 				B5C972EE1A0E998000ED8C69 /* SubmitButton.m in Sources */,
 				7DC96D781A0ECAC000CB7200 /* IGTGroupItemsViewController.m in Sources */,
 				B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */,

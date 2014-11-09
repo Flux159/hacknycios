@@ -11,6 +11,7 @@
 #import "IGTGroupItemsViewController.h"
 #import "SignUpViewController.h"
 #import "LoginViewController.h"
+#import "IGTBeerView.h"
 
 @interface RootViewController ()
 
