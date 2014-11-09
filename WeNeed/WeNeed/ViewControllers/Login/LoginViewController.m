@@ -52,7 +52,7 @@
          CGRect frameEndValue = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
 
          [UIView animateWithDuration:animationDuration delay:0.0 options:animationCurve << 16 animations:^{
-             self.bottomSpaceConstraint.constant = 33.0 + self.view.frame.size.height - frameEndValue.origin.y;
+             self.bottomSpaceConstraint.constant = 20.0 + self.view.frame.size.height - frameEndValue.origin.y;
              [self.view layoutIfNeeded];
          } completion:nil];
      }];
