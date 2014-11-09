@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DC96D781A0ECAC000CB7200 /* GroupItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC96D761A0ECAC000CB7200 /* GroupItemsViewController.m */; };
 		B5C972BD1A0E8C6400ED8C69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972BC1A0E8C6400ED8C69 /* main.m */; };
 		B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972BF1A0E8C6400ED8C69 /* AppDelegate.m */; };
 		B5C972C81A0E8C6400ED8C69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C972C71A0E8C6400ED8C69 /* Images.xcassets */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		2283C58A28F4741E799CCD55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3DDD3A5FC26EB99D7225D352 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DC96D751A0ECAC000CB7200 /* GroupItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupItemsViewController.h; sourceTree = "<group>"; };
+		7DC96D761A0ECAC000CB7200 /* GroupItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupItemsViewController.m; sourceTree = "<group>"; };
 		943655895D5ED9A27DAC9A4A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C972B71A0E8C6400ED8C69 /* WeNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C972BB1A0E8C6400ED8C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				B5C972E21A0E8E4100ED8C69 /* RootViewController.h */,
 				B5C972E31A0E8E4100ED8C69 /* RootViewController.m */,
 				B5C972E41A0E8E4100ED8C69 /* RootViewController.xib */,
+				7DC96D751A0ECAC000CB7200 /* GroupItemsViewController.h */,
+				7DC96D761A0ECAC000CB7200 /* GroupItemsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				TargetAttributes = {
 					B5C972B61A0E8C6400ED8C69 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = RBFW6P4A4X;
 					};
 					B5C972CF1A0E8C6500ED8C69 = {
 						CreatedOnToolsVersion = 6.1;
@@ -358,6 +364,7 @@
 				D8F81FD71A0EF61F008358D9 /* CALayer+utils.m in Sources */,
 				B5C972FA1A0EA5B600ED8C69 /* LoginViewController.m in Sources */,
 				B5C972EE1A0E998000ED8C69 /* SubmitButton.m in Sources */,
+				7DC96D781A0ECAC000CB7200 /* GroupItemsViewController.m in Sources */,
 				B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */,
 				D8F81FDA1A0EF689008358D9 /* WNTextField.m in Sources */,
 				B5C972BD1A0E8C6400ED8C69 /* main.m in Sources */,

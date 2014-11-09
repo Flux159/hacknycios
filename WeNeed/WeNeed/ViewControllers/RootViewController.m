@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 
+#import "GroupItemsViewController.h"
 #import "SignUpViewController.h"
 #import "LoginViewController.h"
 
