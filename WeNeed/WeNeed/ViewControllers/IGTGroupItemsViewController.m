@@ -21,7 +21,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    [self setUpViews];
+}
+
+- (void)setUpViews {
+    [self setUpCollectionView];
+    [self setUpPageControl];
+    [self setUpIGotThisButton];
+}
+
+- (void)setUpCollectionView {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [flowLayout setItemSize:self.view.frame.size];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
@@ -29,16 +39,18 @@
     [flowLayout setMinimumLineSpacing:0];
     [flowLayout setSectionInset:UIEdgeInsetsZero];
     [flowLayout setItemSize:self.view.frame.size];
-    
+
     self.itemsData = @[@"beer", @"pizza", @"trees"];
-    
+
     self.itemsCollectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
     [self.itemsCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"ReuseCell"];
     [self.itemsCollectionView setDataSource:self];
     [self.itemsCollectionView setDelegate:self];
     [self.itemsCollectionView setPagingEnabled:YES];
     [self.view addSubview:self.itemsCollectionView];
-    
+}
+
+- (void)setUpPageControl {
     CGRect pageControlFrame = self.view.frame;
     pageControlFrame.origin.y = pageControlFrame.size.height - 60;
     pageControlFrame.size.height = 60;
@@ -47,9 +59,11 @@
 
     [self.pageControl addTarget:self action:@selector(pageControlChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.pageControl];
+}
 
+- (void)setUpIGotThisButton {
     self.iGotThisButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.iGotThisButton.frame = CGRectMake(25, pageControlFrame.origin.y - 15 - 50, self.view.frame.size.width - 25 - 25, 50);
+    self.iGotThisButton.frame = CGRectMake(25, self.pageControl.frame.origin.y - 15 - 50, self.view.frame.size.width - 25 - 25, 50);
     self.iGotThisButton.layer.cornerRadius = 5;
     self.iGotThisButton.layer.shadowColor = [UIColor blackColor].CGColor;
     self.iGotThisButton.layer.shadowOffset = CGSizeMake(0, 2);
