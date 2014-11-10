@@ -94,6 +94,7 @@ static CGFloat const kWaveAmplitude = 40.0;
     animation.repeatCount = FLT_MAX;
     [self.waveMask addAnimation:animation forKey:@"sliding"];
 
+    // TODO: figure out better way to do this.  causing lag probably because of all the image creations.
     NSTimeInterval delay = 1.0;
     for (int i = 0; i < 100; i++) {
         [self performSelector:@selector(createAndAnimateBubble) withObject:nil afterDelay:delay];
@@ -104,10 +105,6 @@ static CGFloat const kWaveAmplitude = 40.0;
 - (void)stopAnimation {
     [self.waveMask removeAnimationForKey:@"sliding"];
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(createAndAnimateBubble) object:nil];
-}
-
-- (void)dealloc {
-    [self stopAnimation];
 }
 
 - (void)createAndAnimateBubble {

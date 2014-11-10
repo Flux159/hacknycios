@@ -48,7 +48,7 @@
                                     self.logoImageView.center.y - borderRadius,
                                     borderRadius * 2, borderRadius * 2);
     UIView *logoBorderView = [[UIView alloc] initWithFrame:borderFrame];
-    logoBorderView.backgroundColor = [UIColor colorWithRed:242.0/255.0 green:180.0/255.0 blue:24.0/255.0 alpha:0.6];
+    logoBorderView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2];//[UIColor colorWithRed:242.0/255.0 green:180.0/255.0 blue:24.0/255.0 alpha:0.6];
     logoBorderView.layer.cornerRadius = borderFrame.size.width / 2.0;
     logoBorderView.layer.borderWidth = 7.5;
     logoBorderView.layer.borderColor = logoColor.CGColor;
@@ -68,6 +68,18 @@
                                  logoLabel.frame.size.width, logoLabel.frame.size.height);
 
     [self addSubview:logoLabel];
+}
+
+- (void)beginAnimations {
+    // subclasses should override
+}
+
+- (void)stopAnimations {
+    // subclasses should override
+}
+
+- (void)dealloc {
+    [self stopAnimation];
 }
 
 @end

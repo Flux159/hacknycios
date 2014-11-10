@@ -12,4 +12,5 @@
 
 @interface IGTToiletPaperView : IGTItemView
 
+
 @end

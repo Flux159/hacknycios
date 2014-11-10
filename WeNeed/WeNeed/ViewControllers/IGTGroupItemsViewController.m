@@ -9,6 +9,7 @@
 #import "IGTGroupItemsViewController.h"
 
 #import "IGTBeerView.h"
+#import "IGTToiletPaperView.h"
 
 @interface IGTGroupItemsViewController ()
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) UIButton *iGotThisButton;
 
 @property (nonatomic, strong) IGTBeerView *beerView;
+@property (nonatomic, strong) IGTToiletPaperView *toiletPaperView;
 
 @end
 
@@ -58,6 +60,7 @@
 - (void)setUpPages {
     self.itemsData = @[@"beer", @"pizza", @"trees"];
     self.beerView = [[IGTBeerView alloc] initWithFrame:self.view.bounds];
+    self.toiletPaperView = [[IGTToiletPaperView alloc] initWithFrame:self.view.bounds];
 }
 
 - (void)setUpPageControl {
@@ -100,24 +103,42 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [self.itemsCollectionView dequeueReusableCellWithReuseIdentifier:@"ReuseCell" forIndexPath:indexPath];
-    NSUInteger number = indexPath.row;
+    NSUInteger number = indexPath.item;
+    cell.backgroundColor = [UIColor whiteColor];
+    // TODO: This is really the wrong way to handle the cells.
     switch (number) {
         case 0:
-            cell.backgroundColor = [UIColor whiteColor];
             [self.beerView removeFromSuperview];
-            [self.beerView beginAnimation];
+//            [self.beerView beginAnimation];
             [cell addSubview:self.beerView];
             break;
         case 1:
-            [cell setBackgroundColor:[UIColor greenColor]];
             break;
         case 2:
-            [cell setBackgroundColor:[UIColor blackColor]];
+            [self.toiletPaperView removeFromSuperview];
+            [self.toiletPaperView beginAnimation];
+            [cell addSubview:self.toiletPaperView];
             break;
         default:
             break;
     }
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.item) {
+        case 0:
+            [self.beerView stopAnimation];
+            break;
+        case 1:
+            break;
+        case 2:
+            [self.toiletPaperView stopAnimation];
+        default:
+            break;
+    }
+
 }
 
 #pragma mark - Page Control

@@ -12,7 +12,4 @@
 
 @interface IGTBeerView : IGTItemView
 
-- (void)beginAnimation;
-- (void)stopAnimation;
-
 @end

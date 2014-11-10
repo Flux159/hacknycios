@@ -16,4 +16,7 @@
 - (void)addBackgroundWithColor:(UIColor *)color;
 - (void)addLogo:(UIImage *)logo title:(NSString *)title;
 
+- (void)beginAnimation;
+- (void)stopAnimation;
+
 @end
