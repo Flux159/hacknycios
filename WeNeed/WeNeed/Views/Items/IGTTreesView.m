@@ -57,8 +57,6 @@
     NSString *leafImageName = (arc4random()%2)?@"leaf-stem-left":@"leaf-stem-right";
     UIImageView *leafView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:leafImageName]];
     
-    leafView.alpha = (.3 + (arc4random() % 30)/100.0);
-    NSLog(@"alpha: %f", leafView.alpha);
     // rand size
     CGFloat leafSize = 30 + arc4random() % 20;
     // rand origin
