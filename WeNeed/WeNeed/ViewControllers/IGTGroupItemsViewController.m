@@ -81,7 +81,9 @@
     self.iGotThisButton.layer.shadowOpacity = .5;
     [self.iGotThisButton setBackgroundImage:[UIColor imageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
     [self.iGotThisButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.iGotThisButton setTitle:@"I Got This" forState:UIControlStateNormal];
+    [self.iGotThisButton setTitle:@"WE NEED THIS" forState:UIControlStateNormal];
+    self.iGotThisButton.titleLabel.font = [UIFont igtMediumFontWithSize:IGTFontSizeBody];
+
     [self.iGotThisButton addTarget:self action:@selector(iGotThisButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.iGotThisButton];
 }

@@ -10,15 +10,33 @@
 
 @implementation UIFont (IGTStyles)
 
-// TODO: Make these default sizes
-// 16. 18. 24. 30.
-
-+ (UIFont *)igtDefaultFont {
-    return [UIFont fontWithName:@"AvenirNext" size:24.0];
++ (CGFloat)sizeFromIGTFontSize:(IGTFontSize)fontSize {
+    switch (fontSize) {
+        case IGTFontSizeSmall:
+            return 16.0;
+        case IGTFontSizeBody:
+            return 18.0;
+        case IGTFontSizeSubheader:
+            return 24.0;
+        case IGTFontSizeHeader:
+            return 30.0;
+    }
 }
 
-+ (UIFont *)igtDefaultBoldFont {
-    return [UIFont fontWithName:@"AvenirNext-Bold" size:24.0];
++ (UIFont *)igtRegularFontWithSize:(IGTFontSize)fontSize {
+    return [UIFont fontWithName:@"AvenirNext-Regular" size:[self sizeFromIGTFontSize:fontSize]];
+}
+
++ (UIFont *)igtDemiBoldFontWithSize:(IGTFontSize)fontSize {
+    return [UIFont fontWithName:@"AvenirNext-DemiBold" size:[self sizeFromIGTFontSize:fontSize]];
+}
+
++ (UIFont *)igtMediumFontWithSize:(IGTFontSize)fontSize {
+    return [UIFont fontWithName:@"AvenirNext-Medium" size:[self sizeFromIGTFontSize:fontSize]];
+}
+
++ (UIFont *)igtBoldFontWithSize:(IGTFontSize)fontSize {
+    return [UIFont fontWithName:@"AvenirNext-Bold" size:[self sizeFromIGTFontSize:fontSize]];
 }
 
 @end

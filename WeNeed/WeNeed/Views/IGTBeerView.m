@@ -102,7 +102,7 @@ static CGFloat const kWaveAmplitude = 40.0;
     [self insertSubview:beerBorderView belowSubview:self.beerImageView];
 
     UILabel *beerLabel = [[UILabel alloc] init];
-    beerLabel.font = [UIFont igtDefaultBoldFont];
+    beerLabel.font = [UIFont igtBoldFontWithSize:IGTFontSizeSubheader];
     beerLabel.textColor = beerLogoColor;
     beerLabel.attributedText = [[NSAttributedString alloc] initWithString:@"BEER"
                                                                attributes:@{NSKernAttributeName : @7}];

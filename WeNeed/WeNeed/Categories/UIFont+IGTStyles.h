@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, IGTFontSize) {
+    IGTFontSizeSmall,
+    IGTFontSizeBody,
+    IGTFontSizeSubheader,
+    IGTFontSizeHeader,
+};
+
 @interface UIFont (IGTStyles)
 
-+ (UIFont *)igtDefaultFont;
-+ (UIFont *)igtDefaultBoldFont;
++ (UIFont *)igtRegularFontWithSize:(IGTFontSize)fontSize;
++ (UIFont *)igtDemiBoldFontWithSize:(IGTFontSize)fontSize;
++ (UIFont *)igtMediumFontWithSize:(IGTFontSize)fontSize;
++ (UIFont *)igtBoldFontWithSize:(IGTFontSize)fontSize;
 
 @end
