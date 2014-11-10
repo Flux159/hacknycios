@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7DC96D781A0ECAC000CB7200 /* IGTGroupItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC96D761A0ECAC000CB7200 /* IGTGroupItemsViewController.m */; };
-		B59A62391A0EF11A00D58789 /* IGTBeerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A62381A0EF11A00D58789 /* IGTBeerView.m */; };
 		B5B17AA01A10267A00E7A142 /* UIFont+IGTStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B17A9F1A10267A00E7A142 /* UIFont+IGTStyles.m */; };
+		B5B17AA71A10527900E7A142 /* IGTItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B17AA61A10527900E7A142 /* IGTItemView.m */; };
+		B5B17AAC1A10528A00E7A142 /* IGTBeerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B17AA91A10528A00E7A142 /* IGTBeerView.m */; };
+		B5B17AAD1A10528A00E7A142 /* IGTToiletPaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B17AAB1A10528A00E7A142 /* IGTToiletPaperView.m */; };
 		B5C972BD1A0E8C6400ED8C69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972BC1A0E8C6400ED8C69 /* main.m */; };
 		B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C972BF1A0E8C6400ED8C69 /* AppDelegate.m */; };
 		B5C972C81A0E8C6400ED8C69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C972C71A0E8C6400ED8C69 /* Images.xcassets */; };
@@ -45,10 +47,14 @@
 		7DC96D751A0ECAC000CB7200 /* IGTGroupItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTGroupItemsViewController.h; sourceTree = "<group>"; };
 		7DC96D761A0ECAC000CB7200 /* IGTGroupItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTGroupItemsViewController.m; sourceTree = "<group>"; };
 		943655895D5ED9A27DAC9A4A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B59A62371A0EF11A00D58789 /* IGTBeerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTBeerView.h; sourceTree = "<group>"; };
-		B59A62381A0EF11A00D58789 /* IGTBeerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTBeerView.m; sourceTree = "<group>"; };
 		B5B17A9E1A10267A00E7A142 /* UIFont+IGTStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+IGTStyles.h"; sourceTree = "<group>"; };
 		B5B17A9F1A10267A00E7A142 /* UIFont+IGTStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+IGTStyles.m"; sourceTree = "<group>"; };
+		B5B17AA51A10527900E7A142 /* IGTItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTItemView.h; sourceTree = "<group>"; };
+		B5B17AA61A10527900E7A142 /* IGTItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTItemView.m; sourceTree = "<group>"; };
+		B5B17AA81A10528A00E7A142 /* IGTBeerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTBeerView.h; sourceTree = "<group>"; };
+		B5B17AA91A10528A00E7A142 /* IGTBeerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTBeerView.m; sourceTree = "<group>"; };
+		B5B17AAA1A10528A00E7A142 /* IGTToiletPaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTToiletPaperView.h; sourceTree = "<group>"; };
+		B5B17AAB1A10528A00E7A142 /* IGTToiletPaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTToiletPaperView.m; sourceTree = "<group>"; };
 		B5C972B71A0E8C6400ED8C69 /* WeNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C972BB1A0E8C6400ED8C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C972BC1A0E8C6400ED8C69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +112,19 @@
 				3DDD3A5FC26EB99D7225D352 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5B17AA41A10525D00E7A142 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				B5B17AA81A10528A00E7A142 /* IGTBeerView.h */,
+				B5B17AA91A10528A00E7A142 /* IGTBeerView.m */,
+				B5B17AAA1A10528A00E7A142 /* IGTToiletPaperView.h */,
+				B5B17AAB1A10528A00E7A142 /* IGTToiletPaperView.m */,
+				B5B17AA51A10527900E7A142 /* IGTItemView.h */,
+				B5B17AA61A10527900E7A142 /* IGTItemView.m */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		B5C972AE1A0E8C6400ED8C69 = {
@@ -190,8 +209,7 @@
 				D8F81FD91A0EF689008358D9 /* WNTextField.m */,
 				B5C972EC1A0E998000ED8C69 /* SubmitButton.h */,
 				B5C972ED1A0E998000ED8C69 /* SubmitButton.m */,
-				B59A62371A0EF11A00D58789 /* IGTBeerView.h */,
-				B59A62381A0EF11A00D58789 /* IGTBeerView.m */,
+				B5B17AA41A10525D00E7A142 /* Items */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,13 +390,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F81FD71A0EF61F008358D9 /* CALayer+utils.m in Sources */,
+				B5B17AAC1A10528A00E7A142 /* IGTBeerView.m in Sources */,
 				B5C972FA1A0EA5B600ED8C69 /* LoginViewController.m in Sources */,
-				B59A62391A0EF11A00D58789 /* IGTBeerView.m in Sources */,
 				B5C972EE1A0E998000ED8C69 /* SubmitButton.m in Sources */,
 				7DC96D781A0ECAC000CB7200 /* IGTGroupItemsViewController.m in Sources */,
 				B5C972C01A0E8C6400ED8C69 /* AppDelegate.m in Sources */,
+				B5B17AA71A10527900E7A142 /* IGTItemView.m in Sources */,
 				D8F81FDA1A0EF689008358D9 /* WNTextField.m in Sources */,
 				B5B17AA01A10267A00E7A142 /* UIFont+IGTStyles.m in Sources */,
+				B5B17AAD1A10528A00E7A142 /* IGTToiletPaperView.m in Sources */,
 				B5C972BD1A0E8C6400ED8C69 /* main.m in Sources */,
 				B5C972F21A0E9C9B00ED8C69 /* UIColor+WeNeedStyles.m in Sources */,
 				B5C972E51A0E8E4100ED8C69 /* RootViewController.m in Sources */,

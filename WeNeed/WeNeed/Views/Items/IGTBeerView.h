@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IGTBeerView : UIView
+#import "IGTItemView.h"
+
+@interface IGTBeerView : IGTItemView
 
 - (void)beginAnimation;
 - (void)stopAnimation;
