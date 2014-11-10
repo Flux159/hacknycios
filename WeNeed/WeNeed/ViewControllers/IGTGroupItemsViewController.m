@@ -10,6 +10,7 @@
 
 #import "IGTBeerView.h"
 #import "IGTToiletPaperView.h"
+#import "IGTTreesView.h"
 
 @interface IGTGroupItemsViewController ()
 
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) UIButton *iGotThisButton;
 
 @property (nonatomic, strong) IGTBeerView *beerView;
+@property (nonatomic, strong) IGTTreesView *treesView;
 @property (nonatomic, strong) IGTToiletPaperView *toiletPaperView;
 
 @end
@@ -60,6 +62,7 @@
 - (void)setUpPages {
     self.itemsData = @[@"beer", @"pizza", @"trees"];
     self.beerView = [[IGTBeerView alloc] initWithFrame:self.view.bounds];
+    self.treesView = [[IGTTreesView alloc] initWithFrame:self.view.bounds];
     self.toiletPaperView = [[IGTToiletPaperView alloc] initWithFrame:self.view.bounds];
 }
 
@@ -113,6 +116,8 @@
             [cell addSubview:self.beerView];
             break;
         case 1:
+            [self.treesView removeFromSuperview];
+            [cell addSubview:self.treesView];
             break;
         case 2:
             [self.toiletPaperView removeFromSuperview];
@@ -132,6 +137,7 @@
             [self.beerView stopAnimation];
             break;
         case 1:
+            [self.treesView stopAnimation];
             break;
         case 2:
             [self.toiletPaperView stopAnimation];
